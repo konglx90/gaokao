@@ -1,0 +1,24 @@
+{
+  "name": "geo_china",
+  "description": "a beautiful chart of china",
+  "main": "index.js",
+  "authors": [
+    "konglx90"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "highmaps.js"
+  ],
+  "homepage": "https://github.com/konglx90/bottle_me",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "highcharts": "^4.2.5",
+    "requirejs-json": "^0.0.3"
+  }
+}
