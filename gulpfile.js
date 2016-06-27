@@ -5,6 +5,18 @@ const uglify = require('gulp-uglify');
 const rev = require('gulp-rev');
 const spa = require('gulp-spa');
 const concat = require('gulp-concat');
+//const amdOptimize = require('amd-optimize');
+
+//gulp.task("scripts:index", function () {
+//
+//  return gulp.src("src/*.js")
+//    // Traces all modules and outputs them in the correct order.
+//        .pipe(amdOptimize("main"))
+//        .pipe(concat("index.js"))
+//        .pipe(rev())
+//        .pipe(gulp.dest("dist/scripts"));
+//
+//});
 
 gulp.task('spa', function(){
     return gulp.src('index.html')
@@ -16,7 +28,7 @@ gulp.task('spa', function(){
                         .pipe(concat('lib.js'))
                         .pipe(uglify())
                         .pipe(rev())
-                },
+                }
             }
         }))
         .pipe(gulp.dest('build/'))
