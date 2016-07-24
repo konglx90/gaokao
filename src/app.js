@@ -36,7 +36,7 @@ define(['json!web/data.json'], function(data){
                     data: data,
                     mapData: Highcharts["countries/cn/custom/cn-all-china"],
                     joinBy: 'hc-key',
-                    name: 'Random data',
+                    name: '人数',
                     states: {
                         hover: {
                             color: '#BADA55'
