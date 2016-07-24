@@ -5,6 +5,9 @@ const uglify = require('gulp-uglify');
 const rev = require('gulp-rev');
 const spa = require('gulp-spa');
 const concat = require('gulp-concat');
+const gls = require('gulp-live-server');
+
+const server = gls.static('build', 8000);
 //const amdOptimize = require('amd-optimize');
 
 //gulp.task("scripts:index", function () {
@@ -51,4 +54,11 @@ gulp.task('cpy', function(){
         .pipe(gulp.dest('build/web'));
 });
 
+/****************** Server ****************/
+gulp.task('serve', function () {
+  server.start();
+});
+
 gulp.task('default', ['spa', 'cpy']);
+gulp.task('build', ['spa', 'cpy']);
+gulp.task('dev', ['spa', 'cpy', 'serve']);
